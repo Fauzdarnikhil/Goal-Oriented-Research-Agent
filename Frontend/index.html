@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Autonomous Research Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <header class="topbar">
+      <h1>Autonomous Research Agent</h1>
+      <span id="api-status" class="status-pill">Checking backend...</span>
+    </header>
+
+    <main class="main-grid">
+
+      <!-- LEFT ─────────────── GOAL + PLAN -->
+      <aside class="left-panel">
+        <div class="card">
+          <h2>Research Goal</h2>
+          <textarea id="goal-input" placeholder="Describe the topic you want the agent to research..."></textarea>
+          <button id="plan-btn">Generate Plan</button>
+        </div>
+
+        <div class="card" id="plan-card" style="display:none;">
+          <h2>Task Plan</h2>
+          <ul id="task-list"></ul>
+        </div>
+      </aside>
+
+      <!-- CENTER ───────────── ACTIVE TASK -->
+      <section class="center-panel">
+        <div class="card">
+          <h2>Active Task</h2>
+          <div id="progress-text" class="progress-text">No tasks running.</div>
+          <div id="task-spinner" class="spinner hidden"></div>
+
+          <div id="active-task-details" class="task-details">
+            <p>No active task yet.</p>
+          </div>
+
+          <div class="button-row">
+            <button id="execute-task-btn" disabled>Run This Task</button>
+            <button id="auto-run-btn" disabled>Run All Tasks</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT ────────────── FINAL REPORT -->
+      <section class="right-panel">
+        <div class="card" id="final-report-card" style="display:none;">
+          <div class="final-header">
+            <h2>Final Report</h2>
+            <button id="export-pdf-btn">Export PDF</button>
+          </div>
+          <div id="final-report" class="report-box"></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

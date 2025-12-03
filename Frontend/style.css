@@ -1,0 +1,165 @@
+/* ---------- RESET ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0b0e13, #10141b, #12161f);
+  color: #e7e8ee;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ---------- LAYOUT ---------- */
+#app { display: flex; flex-direction: column; height: 100vh; }
+.topbar {
+  background: rgba(18, 25, 34, 0.7);
+  backdrop-filter: blur(16px);
+  padding: 16px 26px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.topbar h1 {
+  font-size: 22px;
+  background: linear-gradient(90deg, #14b8ff, #007aff, #c472ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.status-pill {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  background: #4a4e57;
+}
+.status-ok { background: #04c783; }
+.status-error { background: #e04747; }
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 25% 35% 40%;
+  height: 100%;
+}
+
+/* ---------- PANELS ---------- */
+.left-panel, .center-panel, .right-panel {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background: rgba(23, 27, 36, 0.63);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.28);
+  transition: 0.3s;
+}
+.card:hover {
+  border-color: rgba(0, 140, 255, 0.42);
+}
+
+/* ---------- HEADINGS ---------- */
+h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #cfe8ff;
+  font-weight: 600;
+}
+
+/* ---------- CONTROLS ---------- */
+textarea {
+  width: 100%; height: 100px;
+  border-radius: 10px;
+  border: 1px solid #3b414e;
+  padding: 14px;
+  font-size: 15px;
+  background: rgba(31, 34, 43, 0.85);
+  color: #fff;
+  resize: none;
+  transition: 0.25s;
+}
+textarea:focus {
+  border-color: #009aff;
+  box-shadow: 0 0 0 2px rgba(0,150,255,0.25);
+}
+
+button {
+  background: linear-gradient(135deg, #0094ff, #006bff);
+  border: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: 0.2s;
+}
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,140,255,0.45);
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ---------- TASK LIST ---------- */
+#task-list { list-style: none; }
+.task-item {
+  padding: 14px;
+  background: rgba(29, 32, 41, 0.72);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex; justify-content: space-between;
+  transition: 0.22s;
+}
+.task-item:hover {
+  background: rgba(33, 84, 255, 0.22);
+}
+.task-item.active {
+  background: rgba(0, 136, 255, 0.38);
+  border-color: #009aff;
+  box-shadow: 0 0 12px rgba(0,136,255,0.3);
+}
+.task-status {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* ---------- ACTIVE TASK DETAILS ---------- */
+.task-details {
+  padding: 14px;
+  background: rgba(22, 26, 34, 0.78);
+  border-radius: 10px;
+  max-height: 48vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ---------- REPORT PANEL ---------- */
+.report-box {
+  background: #ffffff;
+  color: #1b1c20;
+  border-radius: 12px;
+  padding: 26px;
+  height: 70vh;
+  overflow-y: auto;
+  font-size: 17px;
+  line-height: 1.62;
+  white-space: pre-wrap;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 6px 30px rgba(0,0,0,0.25);
+}
+.report-box h1, .report-box h2, .report-box h3 {
+  margin-bottom: 12px; margin-top: 10px; font-weight: 600;
+}
+.report-box p { margin-bottom: 10px; }
+
+.final-header {
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom: 12px;
+}
