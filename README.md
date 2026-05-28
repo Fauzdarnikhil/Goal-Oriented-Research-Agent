@@ -201,5 +201,5 @@ This project represents a foundational step toward structured, deterministic AI 
 ---
 
 ## 👨‍💻 Author
-Nikhil Singh
+Nikhil Singh, 
 Developed as a semester project exploring autonomous AI research systems.
