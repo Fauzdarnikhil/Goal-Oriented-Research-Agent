@@ -200,12 +200,6 @@ This project represents a foundational step toward structured, deterministic AI 
 
 ---
 
-## 📄 License
-
-MIT License
-
----
-
 ## 👨‍💻 Author
-
+Nikhil Singh
 Developed as a semester project exploring autonomous AI research systems.
