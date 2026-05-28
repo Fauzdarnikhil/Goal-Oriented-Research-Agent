@@ -59,13 +59,11 @@ project-root/
 │   └── script.js         # Frontend logic & API calls
 │
 ├── backend/
-│   ├── llm_factory/      # LLM initialization and configuration
-│   ├── planner/          # Task decomposition logic
-│   ├── retriever/        # Internal & external retrieval modules
-│   ├── vector_store/     # Chroma integration
-│   ├── memory/           # (Planned) memory handling
+│   ├── memory/           # Vector Database logic
+│   ├── agents/           # All agents ( planner, retriver) logic
+│   ├── data/             # ChromDb data
+│   ├── utils/            # LLM Initalization and Prompts
 │   └── main.py           # Backend entry point / API server
-│
 ├── .env                  # Environment variables (not committed)
 ├── requirements.txt
 └── README.md
@@ -75,13 +73,13 @@ project-root/
 
 ## 🧩 Core Backend Modules
 
-### 1️⃣ LLM Factory
+### 1️⃣ Utils
 Centralized configuration of language models.
 - Model selection
 - Temperature control
 - API key management
 
-### 2️⃣ Planner
+### 2️⃣ Agents
 - Converts research goals into structured subtasks
 - Determines task granularity dynamically
 - Forms the backbone of the research workflow
